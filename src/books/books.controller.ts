@@ -2,23 +2,28 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('books')
 export class BooksController {
-    @Get('/:name')    
-    // @Get('/sapa')
-    hello(@Param('name')name:string){
-        return `Hello ${name} !!`;
+    @Get()
+    getAllBooks(){
+        
     }
-
-    //mengambil semua data payLoad
-    // @Post()
-    // createBook(@Body() payLoad:any){
-    //     console.log(payLoad);
+    // { 
+    // @Get('/:name')    
+    // @Get('/sapa')
+    // hello(@Param('name')name:string){
+    //     return `Hello ${name} !!`;
     // }
 
-    //ambil payLoad name saja
-    @Post()
-    createBook(@Body('name') name:string){
-        console.log(name);
-    }
+    // //mengambil semua data payLoad
+    // // @Post()
+    // // createBook(@Body() payLoad:any){
+    // //     console.log(payLoad);
+    // // }
+
+    // //ambil payLoad name saja via postman
+    // @Post()
+    // createBook(@Body('name') name:string){
+    //     console.log(name);
+    // }
 }
 
 // corepack prepare yarn@ --activate
